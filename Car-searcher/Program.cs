@@ -72,7 +72,15 @@ class Program
         {
             Console.WriteLine($"Decription: {carModel.decription}");
             Console.WriteLine($"Price: {carModel.price}");
-            Console.WriteLine($"Link: {carModel.link}");
+            if (carModel.link[0] == '/')
+            {
+                Console.WriteLine($"Link: https://olx.pl{carModel.link}");
+            }
+            else
+            {
+                Console.WriteLine($"Link: {carModel.link}");
+            }
+
             Console.WriteLine("");
         }
     }
